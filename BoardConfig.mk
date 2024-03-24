@@ -1,7 +1,7 @@
 # inherit from the proprietary version
--include vendor/Micromax/A102/BoardConfigVendor.mk
+-include vendor/alcatel/4013/BoardConfigVendor.mk
 
-LOCAL_PATH := device/Micromax/A102
+LOCAL_PATH := device/alcatel/4013
 
 # Off NINJA
 #USE_NINJA := false
@@ -29,13 +29,13 @@ DONT_DEXPREOPT_PREBUILTS := true
 TARGET_LDPRELOAD := libxlog.so:libmtk_symbols.so
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MT6572
+TARGET_BOOTLOADER_BOARD_NAME := mt6572
 
 TARGET_USERIMAGES_USE_EXT4:=true
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := A102
+TARGET_OTA_ASSERT_DEVICE := 4013
 
 # MTK HARDWARE
 OLD_KERNEL := true
@@ -75,6 +75,7 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
+TARGET_KERNEL_CONFIG := 4013_defconfig
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
 BOARD_CUSTOM_MKBOOTIMG := mtkbootimg
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/bootimg.mk
