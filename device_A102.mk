@@ -3,9 +3,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/Micromax/A102/A102-vendor.mk)
+$(call inherit-product-if-exists, vendor/alcatel/4013/4013-vendor.mk)
 
-LOCAL_PATH := device/Micromax/A102
+LOCAL_PATH := device/alcatel/4013
 
 PRODUCT_CHARACTERISTICS := default
 
@@ -40,7 +40,7 @@ PRODUCT_PACKAGES += \
     tinymix
 
 PRODUCT_PACKAGES += \
-    lib_driver_cmd_mt66xx
+    lib_driver_cmd_mt65xx
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
@@ -162,11 +162,11 @@ PRODUCT_PROPERTY_OVERRIDES := \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.media.use-awesome=true
 
-PRODUCT_NAME := full_A102
-PRODUCT_DEVICE := A102
+PRODUCT_NAME := full_4013
+PRODUCT_DEVICE := 4013
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 854
+TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
 # AAPT
